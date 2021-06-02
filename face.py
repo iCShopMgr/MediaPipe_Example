@@ -26,7 +26,6 @@ with mp_face_detection.FaceDetection(
     image.flags.writeable = True
     image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
     if results.detections:
-      print(len(results.detections))
       for detection in results.detections:
         mp_drawing.draw_detection(image, detection)
     cv2.imshow('MediaPipe Face Detection', image)
